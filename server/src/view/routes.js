@@ -1,11 +1,11 @@
 const express = require("express");
 
-const controller = require("../controller/controller")
+const userController = require("../controller/userController")
 
 const routes = express.Router();
 
-routes.get("/hello", controller.hello);
+routes.post("/register", userController.register);
   
-routes.post("/", controller.task);
+// routes.post("/", controller.task);
 
 module.exports = routes;
