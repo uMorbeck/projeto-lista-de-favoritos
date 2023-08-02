@@ -12,6 +12,12 @@ const port = process.env.PORT || 8000;
 app.use(bodyparser.json());
 app.use("/", routes);
 
+// app.use(express.static(__dirname + "/views"));
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/view/index.html");
+});
+
 connectDB();
 
 app.listen(port, () => {
