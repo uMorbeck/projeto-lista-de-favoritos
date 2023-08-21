@@ -1,6 +1,6 @@
 const User = require("../model/schema/userSchema");
 
-const register = async (req, res) => {
+const login = async (req, res) => {
   const { name, user_name, email, password } = req.body;
   
   if (!name) {
@@ -39,5 +39,5 @@ const register = async (req, res) => {
 };
 
 module.exports = {
-  register,
+  login,
 };
